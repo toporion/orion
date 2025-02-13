@@ -7,28 +7,6 @@ const Offer = require('../models/OfferModel');
 const { v4: uuidv4 } = require('uuid'); // For generating unique token numbers
 const { clearExpiredTokens } = require('../utils/OfferUtils');
 
-// const createUser=async(req,res)=>{
-//     try{
-//         const {email,password}=req.body;
-//         const user=await UserModel.findOne({email})
-//         if(user){
-//             return res.status(400).json({success:false,message:"user already exsist"})
-//         }
-
-//         const hashPassword=await bcrypt.hash(password,10)
-//         const newUser=await UserModel({
-//             ...req.body,password:hashPassword
-//         })
-//         await newUser.save()
-//         res.status(200).json({
-//             success:true,
-//             message:"successfull",
-//             data:newUser
-//         })
-//     }catch(err){
-//         res.status(500).json({success:false,message:"internal server problem"})
-//     }
-// }
 
 const createUser = async (req, res) => {
     try {

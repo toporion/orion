@@ -5,7 +5,7 @@ require('dotenv').config();
 const bodyParser=require('body-parser')
 require('./models/db')
 const BlogRoute=require('./routes/BlogRoute')
-
+const Contactroute=require('./routes/ContactRoute')
 const port = process.env.PORT || 8080
 
 
@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 
 
 app.use('/api/blog',BlogRoute)
+app.use('/api/contact',Contactroute)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
