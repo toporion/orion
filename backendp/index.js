@@ -4,6 +4,7 @@ const cors=require('cors')
 require('dotenv').config();
 const bodyParser=require('body-parser')
 require('./models/db')
+const UserRoute=require('./routes/UserRoute')
 const BlogRoute=require('./routes/BlogRoute')
 const Contactroute=require('./routes/ContactRoute')
 const OfferRoute=require('./routes/OfferRoute')
@@ -15,7 +16,7 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
 
-
+app.use('/api',UserRoute)
 app.use('/api/blog',BlogRoute)
 app.use('/api/contact',Contactroute)
 app.use('/api/offer',OfferRoute)
