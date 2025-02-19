@@ -1,6 +1,6 @@
 
 const UserModel = require('../models/UserModel')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require("jsonwebtoken");
 const Token = require('../models/TokenModel');
 const Offer = require('../models/OfferModel');
@@ -121,6 +121,7 @@ const loginUser = async (req, res) => {
             name: user.name,
             token: user.token, // Include the user's token if still valid
             discount: user.discount, // Include the discount if still valid
+            role: user.role,
         });
     } catch (err) {
         res.status(500).json({
@@ -131,6 +132,69 @@ const loginUser = async (req, res) => {
     }
 };
 
+const getAllUsers=async(req,res)=>{
+    try{
+        const allUsers=await UserModel.find({}).lean()
+        console.log('all users',allUsers)
+        res.status(200).json({
+            success:true,
+            message:"successfully get all users",
+            data:allUsers
+        })
+    }catch(error){
+        res.status(500).json({
+            success:false,
+            message:"Internal server error"
+        })
+    }
+}
+
+const deleteUser=async(req,res)=>{
+    try{
+        const {id}=req.params;
+        const deleteSingleUser=await UserModel.deleteOne({_id:id})
+        res.status(200).json({
+            success:true,
+            message:"successfully deleted user",
+            data:deleteSingleUser
+        })
+    }catch(error){
+        console.log(error)
+        res.status(500).json({
+            success:false,
+            message:"internal server error",error
+            
+        })
+    }
+}
+
+
+const makeAdmin=async(req,res)=>{
+    try{
+        const {id}=req.params;
+        const admin=await UserModel.findByIdAndUpdate(
+            id,
+            {$set:{role:'admin'}},
+            {new:true}
+        )
+        if(!admin){
+            return res.status(404).json({
+                success:false,
+                message:"User not found"
+            })
+        }
+        res.status(200).json({
+            success:true,
+            message:"successfully added the rule",
+            data:admin
+        })
+    }catch(error){
+        res.status(500).json({
+            success:false,
+            message:"internal server error"
+        })
+    }
+}
 const googleSignIn = (req, res) => {
     try {
 
@@ -139,4 +203,4 @@ const googleSignIn = (req, res) => {
     }
 }
 
-module.exports = { createUser, loginUser }
+module.exports = { createUser, loginUser,getAllUsers,deleteUser,makeAdmin }

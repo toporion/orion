@@ -12,7 +12,7 @@ const userSchema=new Schema({
         ref: "Offer", // Links to the OfferModel
         default: null,
       }
-})
+}, { strict: false })
 
 const UserModel=mongoose.model('users',userSchema)
 module.exports=UserModel;

@@ -1,0 +1,38 @@
+[
+    {
+      "title": "Grow your business",
+      "image": "https://i.ibb.co.com/16pC0t4/tempo.png",
+      "description": "Your website is not just showcase its a 24/7 sales person.",
+      "publish_by": "John Doe",
+      "date": "2025-01-10"
+    },
+    {
+      "title": "The Future of AI",
+      "image": "https://i.ibb.co.com/hgSWmT9/1-wu4y-Pe-Q8-Wo-BLp-P1qy-Hp-ZA.png",
+      "description": "A deep dive into how artificial intelligence is shaping our world.",
+      "publish_by": "Jane Smith",
+      "date": "2025-01-09"
+    },
+    {
+      "title": "Top Travel Destinations 2025",
+      "image": "https://i.ibb.co.com/WWmT9WV/smallto-big.jpg",
+      "description": "Discover the must-visit places for an unforgettable experience in 2025.",
+      "publish_by": "Emily Johnson",
+      "date": "2025-01-08"
+    },
+    {
+      "title": "Mastering React",
+      "image": "https://via.placeholder.com/150",
+      "description": "Tips and tricks to become a pro in React development.",
+      "publish_by": "Michael Brown",
+      "date": "2025-01-07"
+    },
+    {
+      "title": "Healthy Living Tips",
+      "image": "https://via.placeholder.com/150",
+      "description": "Simple lifestyle changes to improve your health and wellness.",
+      "publish_by": "Sarah Lee",
+      "date": "2025-01-06"
+    }
+  ]
+  

@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "title": "Custom Website Development",
+      "blog_img": "https://i.ibb.co/vqCBdKf/1725937116987.jpg",
+      "details": [
+        {
+          "heading": "Why Choose Custom Websites?",
+          "description": "Tailored designs offer unique branding opportunities and optimized performance."
+        },
+        {
+          "heading": "Features of Custom Websites",
+          "description": "Responsive design, fast loading speeds, and seamless user experience."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "E-commerce Website Development",
+      "blog_img": "https://i.ibb.co/dtDdmVW/Adobe-Stock-131771407-scaled-e1588869090517.jpg",
+      "details": [
+        {
+          "heading": "Boost Your Online Store",
+          "description": "Drive sales with user-friendly interfaces and secure payment gateways."
+        },
+        {
+          "heading": "Key E-commerce Features",
+          "description": "Product management, inventory tracking, and multi-platform integration."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Responsive Web Design",
+      "blog_img": "https://i.ibb.co.com/sqM0MWJ/Custom.png",
+      "details": [
+        {
+          "heading": "What is Responsive Design?",
+          "description": "Websites that adapt to any device for optimal viewing and usability."
+        },
+        {
+          "heading": "Benefits of Responsive Design",
+          "description": "Improved SEO rankings and better user engagement across devices."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Web Application Development",
+      "blog_img": "https://i.ibb.co/DYY1yk4/enjoy.png",
+      "details": [
+        {
+          "heading": "Dynamic Web Applications",
+          "description": "Interactive and feature-rich solutions for complex business needs."
+        },
+        {
+          "heading": "Why Choose Web Applications?",
+          "description": "Enhanced functionality and scalability for growing businesses."
+        }
+      ]
+    }
+  ]
+  
