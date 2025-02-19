@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(()=>{
         const fetchUser=async()=>{
-            const res=await axios.get('http://localhost:8080/api/users')
+            const res=await axios.get('https://backendp-rho.vercel.app/api/users')
             console.log('see users full data role',res.data)
            setUser(res.data)
         }

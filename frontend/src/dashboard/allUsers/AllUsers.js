@@ -8,20 +8,20 @@ const AllUsers = () => {
     const { data: users = [],refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:8080/api/users');
+            const res = await axios.get('https://backendp-rho.vercel.app/api/users');
             return res.data.data;
         }
     });
 
     const handleDeleteUser=(_id)=>{
-        axios.delete(`http://localhost:8080/api/users/${_id}`)
+        axios.delete(`https://backendp-rho.vercel.app/api/users/${_id}`)
         .then(res=>{
             console.log(res.data)
             refetch()
         })
     }
     const handeleMakeAdmin=(_id)=>{
-        axios.patch(`http://localhost:8080/api/users/${_id}/make-admin`)
+        axios.patch(`https://backendp-rho.vercel.app/api/users/${_id}/make-admin`)
         .then(res=>{
             console.log(res.data)
         })

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/offer'; // Update if deployed
+const API_BASE_URL = 'https://backendp-rho.vercel.app/api/offer'; // Update if deployed
 
 export const getUsersWithOffers = async (page = 1, limit = 10, search = '') => {
   try {
